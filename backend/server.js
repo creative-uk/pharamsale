@@ -24,7 +24,6 @@ app.use(cors({
 
 
 // Serve uploaded files
-app.use('/uploads', express.static(process.env.UPLOAD_PATH));
 
 app.use('/api/auth', AuthRoutes);
 app.use('/api/admin', AdminRoutes);
