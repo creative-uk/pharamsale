@@ -18,12 +18,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials: true, // Note: Boolean value, not a string
-    origin: "http://localhost:5173",
+    origin: "https://pharmsaleb2b.netlify.app/",
 }));
 
 
 // Serve uploaded files
-app.use('/uploads', express.static(process.env.UPLOAD_PATH));
+
 
 app.use('/api/auth', AuthRoutes);
 app.use('/api/admin', AdminRoutes);
