@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials: true, // Note: Boolean value, not a string
-    origin: "http://localhost:5173",
+    origin: "https://pharmsaleb2b.netlify.app/",
 }));
 
 
