@@ -6,7 +6,7 @@ import { persistReducer, persistStore } from 'redux-persist';
 const persistConfig = {
     key: 'root',
     storage,
-    // whitelist: ['Auth']
+//    whitelist: ['Auth']
 };
 
 // Rename the persistReducer to avoid the conflict
@@ -14,8 +14,12 @@ const persistedAuthReducer = persistReducer(persistConfig, AuthSlice);
 
 export const store = configureStore({
     reducer: {
-        Auth: persistedAuthReducer, // Use the new name here
-    }
+        Auth: persistedAuthReducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: false, // Disable serializable check
+        }),
 });
 
 export const persistor = persistStore(store);
