@@ -8,7 +8,7 @@ import AdminRoutes from "./routes/AdminRoutes.js";
 import upload from "./utlis/multerConfig.js";
 
 dotenv.config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 const app = express();
 
 // Database
@@ -18,12 +18,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     credentials: true, // Note: Boolean value, not a string
-    origin: "https://pharmsaleb2b.netlify.app/",
-    // origin: "http://localhost:5173",
+    origin: "http://localhost:5173",
 }));
 
 
 // Serve uploaded files
+// app.use('/uploads', express.static(process.env.UPLOAD_PATH));
 
 app.use('/api/auth', AuthRoutes);
 app.use('/api/admin', AdminRoutes);
