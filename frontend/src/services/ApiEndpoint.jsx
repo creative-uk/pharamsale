@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL:'http://localhost:4000',
-// baseURL:'https://pharmsale-1.onrender.com/',
+    // baseURL:'http://localhost:4000',
+baseURL:'https://pharmsale.onrender.com',
     headers:{
         'Content-Type':'application/json'
 

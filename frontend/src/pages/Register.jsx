@@ -5,6 +5,8 @@ import { post } from '../services/ApiEndpoint.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
+import facebook from '../assets/facebook.png';
+import google from '../assets/google.webp';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
 const Register = () => {
@@ -167,6 +169,23 @@ const Register = () => {
             >
               Sign Up
             </button>
+            <div className="mt-4 text-left text-sm text-gray-500">Or sign up with</div>
+            <div className="mt-3 flex justify-center space-x-3">
+              <button
+                type="button"
+                className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-lg"
+              >
+                <img src={google} alt="Google" className="w-6 h-6 mr-2" />
+                Google
+              </button>
+              <button
+                type="button"
+                className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-lg"
+              >
+                <img src={facebook} alt="Facebook" className="w-6 h-6 mr-2" />
+                Facebook
+              </button>
+            </div>
           </form>
         </div>
       </div>
